@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import com.allanpessin.dsvendas.dto.SellerDTO;
 import com.allanpessin.dsvendas.entities.Seller;
-import com.allanpessin.dsvendas.repositories.Sellerrepository;
+import com.allanpessin.dsvendas.repositories.SellerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class SellerService {
   
   @Autowired
-  private Sellerrepository repository;
+  private SellerRepository repository;
   
   public List<SellerDTO> findAll() {
     List<Seller> result = repository.findAll();
